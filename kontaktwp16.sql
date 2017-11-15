@@ -8,7 +8,8 @@ sifra int not null primary key auto_increment,
 ime varchar (50) not null,
 spol boolean,
 datumrodenja datetime,
-nadimak varchar (50) not null
+nadimak varchar (50) not null,
+sef int not null
 );
 
 create table kontakt
@@ -19,3 +20,4 @@ telefon varchar (50) not null
 );
 
 alter table kontakt add foreign key (osoba) references osoba (sifra);
+alter table osoba add foreign key (sef) references osoba (sifra);
